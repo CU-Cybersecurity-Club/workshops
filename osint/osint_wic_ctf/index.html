@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+  <head>
+    <title>OSINT CTF</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/uikit.almost-flat.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+
+  <body>
+    <div class="uk-flex uk-margin-top uk-margin-bottom">
+      <div class="uk-container uk-container-center">
+        <article class="uk-article uk-float-left">
+          <div class="uk-container uk-text-center">
+            <h1 class="uk-article-title">OSINT CTF</h1>
+            <p class="uk-article-meta">Author: @kernelmethod</p>
+          </div>
+
+          <div class="uk-container-center uk-text-center">
+            <button class="uk-button uk-button-danger uk-margin-bottom" data-uk-toggle="{target:'.hint'}">
+              Give me a hint!
+            </button>
+
+            <div class="hint uk-panel uk-panel-box uk-hidden uk-margin-bottom uk-width-1-2 uk-container-center">
+              This person's name is Timothy Milliren.
+            </div>
+          </div>
+
+          <form class="uk-form">
+
+            <!-- FLAG -->
+            <p class="uk-article-lead">What's this person's name?</p>
+            <p>
+              Flag should be formatted as <span class="monospace">flag{firstname lastname}</span>, e.g.
+              <span class="monospace">flag{Abraham Lincoln}</span>.
+            </p>
+            <div class="uk-form-icon">
+              <i class="uk-icon-flag"></i>
+              <input type="text" class="monospace uk-form-width-large"></input>
+            </div>
+            <button class="uk-button uk-button-primary" type="submit">
+              Check
+            </button>
+
+            <!-- FLAG -->
+            <p class="uk-article-lead">Find their Facebook profile</p>
+            <p>Flag will be in one of Facebook posts.</p>
+            <div class="uk-form-icon">
+              <i class="uk-icon-flag"></i>
+              <input type="text" class="monospace uk-form-width-large"></input>
+            </div>
+            <button class="uk-button uk-button-primary" type="submit">
+              Check
+            </button>
+
+            <!-- FLAG -->
+            <p class="uk-article-lead">Find their Reddit profile</p>
+            <p>Flag will be in their bio.</p>
+            <div class="uk-form-icon">
+              <i class="uk-icon-flag"></i>
+              <input type="text" class="monospace uk-form-width-large"></input>
+            </div>
+            <button class="uk-button uk-button-primary" type="submit">
+              Check
+            </button>
+
+            <!-- FLAG -->
+            <p class="uk-article-lead">Find their GitHub profile</p>
+            <p>Flag will be in their bio.</p>
+            <div class="uk-form-icon">
+              <i class="uk-icon-flag"></i>
+              <input type="text" class="monospace uk-form-width-large"></input>
+            </div>
+            <button class="uk-button uk-button-primary" type="submit">
+              Check
+            </button>
+
+            <!-- FLAG -->
+            <p class="uk-article-lead">Find their email address</p>
+            <p>
+              Flag should be formatted as <span class="monospace">flag{email}</span>, e.g. <span class="monospace">user@example.com</span>.
+            </p>
+            <div class="uk-form-icon">
+              <i class="uk-icon-flag"></i>
+              <input type="text" class="monospace uk-form-width-large"></input>
+            </div>
+            <button class="uk-button uk-button-primary" type="submit">
+              Check
+            </button>
+
+          </form>
+        </article>
+      </div>
+    </div>
+  </body>
+
+  <!-- JavaScript -->
+  <script type="application/javascript" src="assets/js/jquery-3.4.1.min.js"></script>
+  <script type="application/javascript" src="assets/js/uikit.min.js"></script>
+</html>
