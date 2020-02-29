@@ -12,17 +12,28 @@
 
   <body>
 
+    <!-- Template for challenge layouts -->
     <template id="challenge-template">
       <p class="uk-article-lead"></p>
       <p class="uk-article-meta">Difficulty: <span class=""></span></p>
+
+      <!-- Help text -->
       <p></p>
-      <div class="uk-form-icon">
-        <i class="uk-icon-flag"></i>
-        <input type="text" class="monospace uk-form-width-large" id="flag-name"></input>
+
+      <div>
+        <!-- Text input for the flag. -->
+        <div class="uk-form-icon">
+          <i class="uk-icon-flag"></i>
+          <input type="text" class="monospace uk-form-width-large" id="flag-name"></input>
+        </div>
+
+        <button class="uk-button uk-button-primary" type="button">
+          Check
+        </button>
+
+        <!-- Use this to tell the user whether or not the flag was correct -->
+        <div class="result"></div>
       </div>
-      <button class="uk-button uk-button-primary" type="button">
-        Check
-      </button>
     </template>
 
     <div class="uk-flex uk-margin-top uk-margin-bottom">
@@ -30,7 +41,9 @@
         <article class="uk-article uk-float-left">
           <div class="uk-container uk-text-center">
             <h1 class="uk-article-title">OSINT CTF</h1>
-            <p class="uk-article-meta">Author: @kernelmethod</p>
+            <div class="uk-width-1-2 uk-margin-top uk-margin-bottom uk-container-center">
+              <img src="assets/img/tim.jpg" style="image-orientation: from-image;">
+            </div>
           </div>
 
           <div class="uk-container-center uk-text-center">
@@ -39,15 +52,29 @@
             </button>
 
             <div class="hint uk-panel uk-panel-box uk-hidden uk-margin-bottom uk-width-1-2 uk-container-center">
-              This person's name is Timothy Milliren.
+              Tim's full name is Timothy Milliren.
             </div>
           </div>
 
+          <p class="uk-article-lead">
+            Welcome to the CU Cyber Club OSINT CTF!
+          </p>
+
+          <p>
+            We've created a fake persona named <b class="uk-text-bold">Tim</b> (shown above).
+            Your goal is to find as much information about Tim as possible.
+          </p>
+
+          <!-- List of all of the challenges on the site -->
           <form class="uk-form" id="challenges">
           </form>
 
         </article>
       </div>
+    </div>
+
+    <!-- Buffer between last challenge and bottom of page -->
+    <div style="height: 10vh;">
     </div>
   </body>
 
@@ -59,5 +86,6 @@
   <script type="application/javascript" src="assets/js/sjcl.js"></script>
 
   <!-- Custom Javascript -->
-  <script type="application/javascript" src="assets/js/script.js"></script>
+  <script type="application/javascript" src="assets/js/layout.js"></script>
+  <script type="application/javascript" src="assets/js/challenges.js"></script>
 </html>
