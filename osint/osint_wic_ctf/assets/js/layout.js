@@ -99,14 +99,22 @@ function add_challenge(challenge_title, challenge_data) {
     // Set the help text
     ptags[2].innerHTML = challenge_data["help"];
 
-    // Configure the button to check the flag
     let input_div = template.querySelector(".uk-grid");
     input_div.setAttribute("id", id);
     if ( "flag" in challenge_data ) {
+        // Configure the button to check the flag
         let check_button = template.querySelector("button");
         let flag = challenge_data["flag"];
         let cmd = "check_answer('"+id+"',["+flag+"])"
         check_button.setAttribute("onClick", cmd);
+
+        // Configure the input div to test the flag when the enter key
+        // is pressed.
+        input_div.querySelector("input").addEventListener("keyup", function(event) {
+            if ( event.key == "Enter" ) {
+                check_answer(id, flag);
+            }
+        });
     }
 
     challenge_list.appendChild(template);
