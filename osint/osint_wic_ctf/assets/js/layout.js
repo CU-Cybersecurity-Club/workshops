@@ -23,6 +23,7 @@ let challenges = {
             "flag": [ -1565240874, 2138259484, -1640369872, -556117414, 508542287, -462511722, 736660485, 472351297 ],
         },
     },
+
     "Personal information": {
         "What is Tim's full name?": {
             "difficulty": "Easy",
@@ -40,6 +41,7 @@ let challenges = {
             "flag": [ 1153733438, -1502275302, 62672678, 200638444, -993829380, -1633629449, -937807304, -2113025586 ],
         },
     },
+
     "Bonus": {
         "Find the GitHub repository where this CTF is being developed": {
             "difficulty": "Medium",

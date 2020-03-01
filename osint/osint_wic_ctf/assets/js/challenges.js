@@ -21,6 +21,10 @@ function check_answer(challenge_id, flag_hash) {
         input.setAttribute("class", input_classes + " uk-form-success");
         input.setAttribute("disabled", "");
         input_div.querySelector("button").remove();
+
+        // Add flag to the 'flags' cookie
+        gathered_flags[challenge_id] = input.value;
+        set_flags_cookie();
     }
     else {
         input.setAttribute("class", input_classes + " uk-form-danger");
@@ -71,3 +75,54 @@ function get_hash(flag) {
     let hashes = hashfn.finalize();
     return hashes;
 }
+
+/*
+ * Insert flag into a challenge input and check it.
+ */
+function insert_flag(id, flag) {
+    const challenge = document.getElementById(id);
+    challenge.querySelector("input").value = flag;
+    challenge.querySelector("button").click();
+}
+
+/*************************************************************
+ * Functionality related to the 'flags' cookie
+ *
+ * The site uses a 'flags' cookie so that even if the page is refreshed, the
+ * user's results are still there.
+ *************************************************************/
+var gathered_flags = {};
+
+function set_flags_cookie() {
+    document.cookie = "flags=" + JSON.stringify(gathered_flags);
+}
+
+function reset_flags() {
+    document.cookie = "flags=";
+    location.reload();
+}
+
+function run() {
+    // const flag_regexp = /.*(?:; |)flags=([^;]*)/
+    const flag_regexp = /.*(?:; |)flags=([^;]*)(?:;.*|$)/;
+    const match = document.cookie.match(flag_regexp);
+
+    if ( match !== null ) {
+        gathered_flags = JSON.parse(match[1]);
+    }
+
+    /*
+     * When the page loads, set all of the flags that the user has already found.
+     * Delete any result alerts that may be generated in the process.
+     */
+    Object.keys(gathered_flags).forEach(function(id) {
+        const flag = gathered_flags[id];
+        insert_flag(id, flag);
+    });
+
+    document.querySelectorAll(".result").forEach(function(el) {
+        el.remove();
+    });
+}
+
+window.onload = run;
