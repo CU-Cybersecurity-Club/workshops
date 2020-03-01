@@ -39,7 +39,14 @@ let challenges = {
             "help": "This picture was taken from inside a restaurant. The flag should be formatted as <span class='monospace'>flag{restaurant}</span>.",
             "flag": [ 1153733438, -1502275302, 62672678, 200638444, -993829380, -1633629449, -937807304, -2113025586 ],
         },
-    }
+    },
+    "Bonus": {
+        "Find the GitHub repository where this CTF is being developed": {
+            "difficulty": "Medium",
+            "help": "You'll find the flag in the <span class='monospace'>README.md</span> file where the code is located.",
+            "flag": [ 1819628408, 1045100549, 1427160234, -1540049015, 826166590, 1759412315, -1686643272, -1900162883 ],
+        },
+    },
 };
 
 /*
