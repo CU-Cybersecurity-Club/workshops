@@ -4,22 +4,22 @@ let challenges = {
     "Social mediaz": {
         "Find Tim's Facebook profile": {
             "difficulty": "Easy",
-            "help": "You will find the flag in Tim's bio",
+            "help": "You will find the flag in Tim's bio.",
             "flag": [ 252219629, 1275647269, -950986246, -1092619567, 1009108659, 120247186, -1811358450, 1905063291 ],
         },
         "Find Tim's Twitter profile": {
             "difficulty": "Easy",
-            "help": "You will find the flag in Tim's bio",
+            "help": "You will find the flag in Tim's bio.",
             "flag": [ -1284738369, -2132894347, -804238834, -267869104, 1983723238, -595183392, -1806617023, 411476346 ],
         },
         "Find Tim's Reddit profile": {
             "difficulty": "Easy",
-            "help": "You will find the flag in Tim's bio",
+            "help": "You will find the flag in Tim's bio.",
             "flag": [ -971382586, 610884631, -403965118, -468223092, 1020951242, -241560144, -1277589624, 2053991720 ],
         },
         "Find Tim's GitHub profile": {
             "difficulty": "Easy",
-            "help": "You will find the flag in Tim's bio",
+            "help": "You will find the flag in Tim's bio.",
             "flag": [ -1565240874, 2138259484, -1640369872, -556117414, 508542287, -462511722, 736660485, 472351297 ],
         },
     },

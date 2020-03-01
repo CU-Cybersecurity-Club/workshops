@@ -27,7 +27,7 @@ function check_answer(challenge_id, flag_hash) {
 
     // Apply CSS to the text input based on whether or not the flag
     // was correct.
-    const input_classes = "monospace uk-form-width-large";
+    const input_classes = "monospace flag-input uk-form-width-large";
     const result_classes = "uk-alert uk-width-small-1-3";
     if ( correct_flag ) {
         input.setAttribute("class", input_classes + " uk-form-success");
