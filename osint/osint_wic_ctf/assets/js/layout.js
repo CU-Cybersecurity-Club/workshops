@@ -100,7 +100,7 @@ function add_challenge(challenge_title, challenge_data) {
     ptags[2].innerHTML = challenge_data["help"];
 
     // Configure the button to check the flag
-    let input_div = template.querySelector("div");
+    let input_div = template.querySelector(".uk-grid");
     input_div.setAttribute("id", id);
     if ( "flag" in challenge_data ) {
         let check_button = template.querySelector("button");

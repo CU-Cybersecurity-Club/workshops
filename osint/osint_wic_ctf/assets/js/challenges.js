@@ -61,7 +61,7 @@ function create_result_alert(input_div, correct_flag) {
     }
 
     alert_div.appendChild(result_text);
-    input_div.appendChild(alert_div);
+    input_div.querySelector("div").appendChild(alert_div);
 
     return alert_div;
 }
