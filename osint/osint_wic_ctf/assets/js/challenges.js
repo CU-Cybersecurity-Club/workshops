@@ -107,7 +107,7 @@ function run() {
     const flag_regexp = /.*(?:; |)flags=([^;]*)(?:;.*|$)/;
     const match = document.cookie.match(flag_regexp);
 
-    if ( match !== null ) {
+    if ( match !== null && match[1].length > 0 ) {
         gathered_flags = JSON.parse(match[1]);
     }
 
@@ -125,4 +125,4 @@ function run() {
     });
 }
 
-window.onload = run;
+run();
