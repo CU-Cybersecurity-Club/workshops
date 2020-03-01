@@ -32,7 +32,15 @@
         </button>
 
         <!-- Use this to tell the user whether or not the flag was correct -->
-        <div class="result"></div>
+        <div class="result" data-uk-alert="">
+        </div>
+      </div>
+    </template>
+
+    <!-- Template for alert saying whether or not a guess was correct -->
+    <template id="flag-guess-alert-template">
+      <div class="result uk-alert uk-width-small-1-3" data-uk-alert="">
+        <a class="uk-alert-close uk-close" href=""></a>
       </div>
     </template>
 

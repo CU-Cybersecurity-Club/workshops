@@ -33,34 +33,32 @@ function check_answer(challenge_id, flag_hash) {
  * the user guessed was correct.
  */
 function create_result_alert(input_div, correct_flag) {
+    // Delete existing alerts
     let alert_div = input_div.querySelector(".result");
-
-    // Clear out contents of the alert_div if it's not currently empty
-    while ( alert_div.firstChild ) {
-        alert_div.removeChild(alert_div.firstChild);
+    if ( alert_div !== null ) {
+        alert_div.remove();
     }
-    alert_div.setAttribute("data-uk-alert", "");
 
-    // Add an icon that allows us to close the alert
-    let close_icon = document.createElement("a");
-    close_icon.setAttribute("class", "uk-alert-close uk-close");
-    close_icon.setAttribute("href", "");
-    alert_div.appendChild(close_icon);
+    alert_div = document.getElementById("flag-guess-alert-template")
+                        .content
+                        .firstElementChild
+                        .cloneNode(true);
 
     // Add a text node to the alert
     let result_text = document.createElement("p");
-    alert_div.appendChild(result_text);
 
     // Set the styling and contents of the alert
-    const alert_classes = "result uk-alert uk-width-small-1-3";
     if ( correct_flag ) {
-        alert_div.setAttribute("class", alert_classes + " uk-alert-success");
+        alert_div.classList.add("uk-alert-success");
         result_text.textContent = "Correct!";
     }
     else {
-        alert_div.setAttribute("class", alert_classes + " uk-alert-danger");
+        alert_div.classList.add("uk-alert-danger");
         result_text.textContent = "Try again";
     }
+
+    alert_div.appendChild(result_text);
+    input_div.appendChild(alert_div);
 
     return alert_div;
 }
