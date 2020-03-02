@@ -7,7 +7,7 @@ let challenges = {
             "help": "You will find the flag in Tim's bio.",
             "flag": [ 252219629, 1275647269, -950986246, -1092619567, 1009108659, 120247186, -1811358450, 1905063291 ],
         },
-        "Find Tim's Twitter profile": {
+        "Find his Twitter profile": {
             "difficulty": "Easy",
             "help": "You will find the flag in Tim's bio.",
             "flag": [ -1284738369, -2132894347, -804238834, -267869104, 1983723238, -595183392, -1806617023, 411476346 ],
@@ -17,7 +17,7 @@ let challenges = {
             "help": "You will find the flag in Tim's bio.",
             "flag": [ -971382586, 610884631, -403965118, -468223092, 1020951242, -241560144, -1277589624, 2053991720 ],
         },
-        "Find Tim's GitHub profile": {
+        "Find his GitHub profile": {
             "difficulty": "Easy",
             "help": "You will find the flag in Tim's bio.",
             "flag": [ -1565240874, 2138259484, -1640369872, -556117414, 508542287, -462511722, 736660485, 472351297 ],
@@ -30,15 +30,25 @@ let challenges = {
             "help": "Flag should be formatted as <span class='monospace'>flag{firstname lastname}</span>, e.g. <span class='monospace'>flag{Abraham Lincoln}</span>.",
             "flag": [ 1087248789, -966896528, 1124723056, -522472902, 641224337, 302855631, 195621603, 1950266352 ],
         },
-        "Find Tim's email address": {
+        "What is Tim's birthday?": {
+            "difficulty": "Easy",
+            "help": "Enter flag as <span class='monospace'>flag{MM/DD/YYYY}</span>, e.g. <span class='monospace'>flag{02/29/1996}</span>.",
+            "flag": [ -434588830, 88474, 896151214, 1316148295, 1045829909, -1594213330, 680856441, 557244721 ],
+        },
+        "Find his email address": {
             "difficulty": "Medium",
             "help": "Flag should be formatted as <span class='monospace'>flag{email}</span>, e.g. <span class='monospace'>flag{user@example.com}</span>.",
             "flag": [ 1749497196, -900797865, -721542599, 1928463999, -1983923306, -803313799, -1385460726, -2091524867 ],
         },
-        "Where was this photo taken?": {
+        "Where was Tim's photo taken?": {
             "difficulty": "Medium",
-            "help": "This picture was taken from inside a restaurant. The flag should be formatted as <span class='monospace'>flag{restaurant}</span>.",
+            "help": "This picture was taken from inside a restaurant. The flag should be formatted as <span class='monospace'>flag{restaurant name}</span>.",
             "flag": [ 1153733438, -1502275302, 62672678, 200638444, -993829380, -1633629449, -937807304, -2113025586 ],
+        },
+        "Where was Tim at 11:32pm MST on March 1, 2020?": {
+            "difficulty": "Hard",
+            "help": "The flag is <span class='monospace'>flag{address}</span>. Write the address as it is shown in Google Maps.",
+            "flag": [ 444696922, 2028548656, -983534683, 326040411, 199483094, -1111746387, 1492505800, -1373398931 ],
         },
     },
 
@@ -58,13 +68,13 @@ let challenges = {
 function difficulty_level_color(difficulty) {
     let diff = difficulty.toLowerCase();
     if ( diff == "easy" ) {
-        return "uk-text-success";
+        return "uk-text-success uk-text-bold";
     }
     else if ( diff == "medium" ) {
-        return "uk-text-warning";
+        return "uk-text-warning uk-text-bold";
     }
     else if ( diff == "hard" ) {
-        return "uk-text-danger";
+        return "uk-text-danger uk-text-bold";
     }
     else {
         console.warn("Difficulty " + difficulty + " not defined.");

@@ -16,7 +16,7 @@ function check_answer(challenge_id, flag_hash) {
     // the results.
     create_result_alert(input_div, correct_flag);
 
-    const input_classes = "monospace flag-input uk-form-width-large";
+    const input_classes = "monospace flag-input uk-width-1-1";
     if ( correct_flag ) {
         input.setAttribute("class", input_classes + " uk-form-success");
         input.setAttribute("disabled", "");
